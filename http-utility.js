@@ -9,6 +9,7 @@ var PEM = fs.readFileSync(path.join(__dirname, './chain.pem'));
 module.exports = HttpUtility;
 
 function HttpUtility(c) {
+  this.auth = c.auth;
   this.url = c.url || URL;
 }
 
